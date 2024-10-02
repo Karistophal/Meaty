@@ -1,9 +1,7 @@
 import Image from "next/image";
 import Burger from "@/app/assets/Burger.png"
-import Sauce from "@/app/assets/Sauce.png"
 
 import Header from "./components/Header";
-import CardImage from "./components/CardImage";
 import Band from "./components/Band";
 import MainBurger from "./components/main/MainBurger";
 import TextFoodRules from "./components/main/TextFoodRules";
