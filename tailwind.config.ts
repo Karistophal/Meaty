@@ -14,6 +14,20 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }: { addUtilities: Function }) {
+      addUtilities({
+        '.fontsherif': {
+          letterSpacing: '-4px',
+          fontFamily: 'var(--font-barlow-condensed)',
+        },
+        '.text-10xl': {
+          fontSize: "10rem",
+          lineHeight: "1",
+        }
+      });
+    },
+  ],
 };
+
 export default config;

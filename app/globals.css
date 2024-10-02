@@ -3,16 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #FFF0DC;
   --foreground: #171717;
+  --fontColor: #2B0F00;
+  --fontColorDark: #1C0A00;
+  --primary: #FEC51C;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   color: var(--foreground);
@@ -24,4 +21,27 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+/* Scrollbar pour Chrome, Safari et Edge */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background); 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--fontColor); 
+  border-radius: 10px;
+  border: 3px solid var(--background);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: darken(var(--fontColor), 10%);
+}
+/* Scrollbar pour Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--fontColor) var(--background);
 }
