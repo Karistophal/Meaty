@@ -4,7 +4,7 @@ import TextBurger from '../TextBurger'
 
 function TextFoodRules() {
     return (
-        <div className="flex flex-col text-9xl font-black text-[var(--fontColor)] fontsherif uppercase mt-[100px] w-full min-w-[1050px] max-w-[1200px] px-[50px]">
+        <div className="flex flex-col text-9xl font-black text-[var(--fontColor)] fontsherif uppercase mt-[200px] w-full min-w-[1050px] max-w-[1200px] px-[50px]">
             <div className="flex flex-row gap-8 justify-between ">
                 <div>Food</div>
                 <div>rules</div>
@@ -31,6 +31,7 @@ function TextFoodRules() {
             </div>
             <div className="flex flex-row gap-8 justify-between">
                 <div>glistening</div>
+                <div>¨</div>
                 <div>burger</div>
             </div>
         </div>

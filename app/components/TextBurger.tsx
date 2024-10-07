@@ -18,7 +18,7 @@ function TextBurger({ bacon, chicken, double }: TextBurgerProps) {
         <Image src={bacon ? Bacon : chicken ? Chicken : Double} alt="Bacon" 
         className={`left object-contain 
             ${bacon ? 'w-[210px] translate-y-[40px]'
-            : double ? 'w-[220px] translate-y-[40px]' 
+            : double ? 'w-[250px] translate-y-[45px]' 
             : chicken ? 'w-[120px] translate-y-[30px]' 
             : 'w-[200px]'}`} />
         </div>

@@ -13,7 +13,7 @@ interface BandProps {
 function Band({ first }: BandProps) {
     return (
         <div>
-            <div className={`absolute w-[10000px] h-[120px] flex justify-around items-center text-[var(--background)] font-black text-5xl z-100 rotate-[4deg] bg-[var(--fontColorDark)] left-1/2 top-[${first ? '400px' : '0px'}] -translate-x-[50%] -z-10`}>
+            <div className={`absolute w-[10000px] h-[120px] flex justify-around items-center text-[var(--background)] font-black text-5xl z-100 rotate-[4deg] bg-[var(--fontColorDark)] left-1/2 -translate-x-[50%] -z-10 ${first ? 'top-[400px]' : ''}`}>
                 {
                     Array(9).fill(0).map(() => (
                         <>
@@ -27,7 +27,7 @@ function Band({ first }: BandProps) {
                     ))
                 }
             </div>
-            <div className={`absolute w-[10000px] h-[120px] flex justify-around items-center text-[var(--background)] font-black text-5xl z-100 rotate-[-4deg] bg-[var(--fontColor)] left-1/2 top-[${first ? '400px' : '0px'}] -translate-x-[50%] z-10`}>
+            <div className={`absolute w-[10000px] h-[120px] flex justify-around items-center text-[var(--background)] font-black text-5xl z-100 rotate-[-4deg] bg-[var(--fontColor)] left-1/2 -translate-x-[50%] z-10 ${first ? 'top-[400px]' : ''}`}>
                 {
                     Array(9).fill(0).map(() => (
                         <>
