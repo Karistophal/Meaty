@@ -45,3 +45,55 @@ html {
   scrollbar-width: thin;
   scrollbar-color: var(--fontColor) var(--background);
 }
+
+
+
+
+
+
+
+
+
+
+/* styles.css */
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+.band-container {
+
+}
+
+.band-container:nth-child(0) {
+  animation-delay: calc(20s / 9 * 0);
+}
+.band-container:nth-child(1) {
+  animation-delay: calc(20s / 9 * 1);
+}
+.band-container:nth-child(2) {
+  animation-delay: calc(20s / 9 * 2);
+}
+.band-container:nth-child(3) {
+  animation-delay: calc(20s / 9 * 3);
+}
+.band-container:nth-child(4) {
+  animation-delay: calc(20s / 9 * 4);
+}
+.band-container:nth-child(5) {
+  animation-delay: calc(20s / 9 * 5);
+}
+.band-container:nth-child(6) {
+  animation-delay: calc(20s / 9 * 6);
+}
+.band-container:nth-child(7) {
+  animation-delay: calc(20s / 9 * 7);
+}
+.band-container:nth-child(8) {
+  animation-delay: calc(20s / 9 * 8);
+}
