@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import Burger from "@/app/assets/Burger.png"
 
@@ -6,11 +8,16 @@ import Band from "./components/Band";
 import MainBurger from "./components/main/MainBurger";
 import TextFoodRules from "./components/main/TextFoodRules";
 import Loader from "./components/Loader"; 
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Remet le user en haut de la page
+  }, []);  
+  
   return (
     <div className="relative w-full flex flex-col items-center overflow-hidden">
-      <Header top />
+      <Header top />  
       <MainBurger />
       <TextFoodRules />
 
