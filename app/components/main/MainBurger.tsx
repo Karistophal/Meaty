@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react'
 import Band from '../Band'
 import Image from 'next/image'
@@ -14,6 +16,7 @@ import Certification from "@/app/assets/Certification.png"
 import BurgerSvg from "@/app/assets/BurgerSvg.svg"
 import Burger from "@/app/assets/Burger.png"
 
+import { motion } from 'framer-motion'
 
 function MainBurger() {
     return (
@@ -22,8 +25,14 @@ function MainBurger() {
             <div className="relative w-full min-h-[2400px] bg-[#FEC51C] rounded-full z-0" >
                 <Image src={Burger} alt="Burger" layout="responsive" width={100} height={100} className="absolute pl-2 z-20" />
                 <div>
-                    <p className="absolute w-[1400px] -left-[calc(700px-50%)] top-[-100px] text-center text-10xl font-black text-[var(--fontColor)] fontsherif">LOVE EVERY BITE</p>
-                    <Image src={Certification} alt="Certfication" width={200} height={200} className="absolute left-[105%] z-20 rotate-[25deg]" />
+                    <motion.div initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8, delay: 7, ease: "easeInOut" }}>
+                        <p className="absolute w-[1400px] -left-[calc(700px-50%)] top-[-100px] text-center text-10xl font-black text-[var(--fontColor)] fontsherif">LOVE EVERY BITE</p>
+                    </motion.div>
+
+                    <motion.div initial={{ y: -100, scale: 1.5, rotate: 20, opacity: 0 }} animate={{ y: 0, scale: 1, rotate: 0, opacity: 1 }} transition={{ type: "tween", duration: 0.8, delay: 8, ease: [1, 0, .75, .45] }} className='absolute left-[105%] z-20 rotate-[25deg] w-[200px] h-[200px]'>
+                        <Image src={Certification} alt="Certfication" />
+                    </motion.div>
+
                 </div>
             </div>
             <div className="absolute w-full h-full rounded-full overflow-hidden">
@@ -33,13 +42,19 @@ function MainBurger() {
             <div className="absolute w-[140%] h-full translate-y-[580px]">
                 <div className="text-center text-10xl font-black text-[var(--fontColor)] fontsherif">OUR SECRET RECIPE</div>
 
+                <CardImage src={Bacon} title="Bacon" text="Powered by bacon and admit it, for a seconde here, all your problems were away" left='-180px' rotation='-13deg' top='450px' />
+                <CardImage src={Cheese} title="Cheese" text="The cheese for an awewome healthy future, because cheese means more" left='-190px' top='950px' />
+                <CardImage src={Tomatoes} title="Veggie" text="Veggies filled with the essence of nature, don't panic, it's organic" left='-190px' rotation="-13deg" top='1500px' />
+                <CardImage src={Steak} title="Patty" text="100% pure beef, big and beefy, go wild for our juicy beefy burgers" right='-190px' rotation="13deg" top='550px' />
+                <CardImage src={Bread} title="Bun" text="Fresh bun, baked to perfection, where every loaf is a masterpiece" right='-230px' rotation="-13deg" top='1050px' />
+                <CardImage src={Sauce} title="Sauce" text="Our secret sauce, a blend of spices and herbs, a taste of heaven" right='-140px' top='1570px' />
 
-                <CardImage src={Bacon} title="Bacon" text="Powered by bacon and admit it, for a seconde here, all your problems were away" left='-100px' rotation='-13deg' top='450px' />
+                {/* <CardImage src={Bacon} title="Bacon" text="Powered by bacon and admit it, for a seconde here, all your problems were away" left='-100px' rotation='-13deg' top='450px' />
                 <CardImage src={Cheese} title="Cheese" text="The cheese for an awewome healthy future, because cheese means more" left='-110px' top='950px' />
-                <CardImage src={Tomatoes} title="Veggie" text="Veggies filled with the essence of nature, don't panic, it's organic" left='-110px' rotation="-13deg" top='1500px'  />
+                <CardImage src={Tomatoes} title="Veggie" text="Veggies filled with the essence of nature, don't panic, it's organic" left='-110px' rotation="-13deg" top='1500px' />
                 <CardImage src={Steak} title="Patty" text="100% pure beef, big and beefy, go wild for our juicy beefy burgers" right='-110px' rotation="13deg" top='550px' />
                 <CardImage src={Bread} title="Bun" text="Fresh bun, baked to perfection, where every loaf is a masterpiece" right='-150px' rotation="-13deg" top='1050px' />
-                <CardImage src={Sauce} title="Sauce" text="Our secret sauce, a blend of spices and herbs, a taste of heaven" right='-60px' top='1570px' />
+                <CardImage src={Sauce} title="Sauce" text="Our secret sauce, a blend of spices and herbs, a taste of heaven" right='-60px' top='1570px' /> */}
             </div>
 
         </div>

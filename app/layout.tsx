@@ -15,7 +15,7 @@ const geistMono = localFont({
 const BarlowCondensed = localFont({
   src: "./fonts/BarlowCondensed-Black.ttf",
   variable: "--font-barlow-condensed",
-  weight: "100 900",
+  weight: "900",
 });
 
 export const metadata: Metadata = {

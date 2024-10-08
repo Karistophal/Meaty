@@ -5,14 +5,12 @@ import Header from "./components/Header";
 import Band from "./components/Band";
 import MainBurger from "./components/main/MainBurger";
 import TextFoodRules from "./components/main/TextFoodRules";
-
-import CardImage from "./components/CardImage";
-import Sauce from "@/app/assets/foodCard/sauce.png";
+import Loader from "./components/Loader"; 
 
 export default function Home() {
   return (
     <div className="relative w-full flex flex-col items-center overflow-hidden">
-      <Header />
+      <Header top />
       <MainBurger />
       <TextFoodRules />
 
@@ -30,6 +28,7 @@ export default function Home() {
       </div>
 
       <Header />
+      <Loader />
     </div>
   );
 }

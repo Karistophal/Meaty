@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 :root {
   --background: #FFF0DC;
   --foreground: #171717;
@@ -50,50 +52,126 @@ html {
 
 
 
+.spacing-normal {
+  letter-spacing: normal;
+}
 
 
-
-
-
-/* styles.css */
-@keyframes scroll {
-  0% {
-    transform: translateX(100%);
+@keyframes bandSpawnLeft {
+  to {
+    left: 0;
   }
-  100% {
-    transform: translateX(-100%);
+}
+
+@keyframes bandSpawnRight {
+  to {
+    right: 0;
   }
 }
 
 
 .band-container {
-
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--fontColorDark);
 }
 
-.band-container:nth-child(0) {
-  animation-delay: calc(20s / 9 * 0);
+.band-container-left {
+  animation: bandSpawnLeft 4s ease-in-out forwards;
+  left: 100%;
 }
-.band-container:nth-child(1) {
-  animation-delay: calc(20s / 9 * 1);
+
+.band-container-right {
+  animation: bandSpawnRight 4s ease-in-out forwards;
+  right: 100%;
 }
-.band-container:nth-child(2) {
-  animation-delay: calc(20s / 9 * 2);
+
+@keyframes scroll {
+  to {
+    left: -2500px;
+  }
 }
-.band-container:nth-child(3) {
-  animation-delay: calc(20s / 9 * 3);
+
+.band-item {
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 100%;
+  animation: scroll 60s linear infinite;
 }
-.band-container:nth-child(4) {
-  animation-delay: calc(20s / 9 * 4);
+
+.reverse {
+  animation-direction: reverse;
 }
-.band-container:nth-child(5) {
-  animation-delay: calc(20s / 9 * 5);
+
+.band-item0 {
+  animation-delay: calc(60s / 9 * (9 - 1) * -1);
 }
-.band-container:nth-child(6) {
-  animation-delay: calc(20s / 9 * 6);
+.band-item1 {
+  animation-delay: calc(60s / 9 * (9 - 2) * -1);
 }
-.band-container:nth-child(7) {
-  animation-delay: calc(20s / 9 * 7);
+.band-item2 {
+  animation-delay: calc(60s / 9 * (9 - 3) * -1);
 }
-.band-container:nth-child(8) {
-  animation-delay: calc(20s / 9 * 8);
+.band-item3 {
+  animation-delay: calc(60s / 9 * (9 - 4) * -1);
+}
+.band-item4 {
+  animation-delay: calc(60s / 9 * (9 - 5) * -1);
+}
+.band-item5 {
+  animation-delay: calc(60s / 9 * (9 - 6) * -1);
+}
+.band-item6 {
+  animation-delay: calc(60s / 9 * (9 - 7) * -1);
+}
+.band-item7 {
+  animation-delay: calc(60s / 9 * (9 - 8) * -1);
+}
+.band-item8 {
+  animation-delay: calc(60s / 9 * (9 - 9) * -1);
+}
+
+
+
+
+@keyframes fadeIn {
+  0% {
+    width: 0; 
+    opacity: 1;
+  }
+  50% {
+    width: 100%; 
+  }
+  70% {
+    width: 100%; 
+    transform: translateX(0);
+  }
+  100% {
+    width: 100%;
+    transform: translateX(100%);
+    opacity: 1;
+  }
+}
+
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.loader-item {
+  position: absolute;
+  height: 100%;
+  width: 0;
+  opacity: 0;
+  animation: fadeIn 1.8s ease-in-out;
 }

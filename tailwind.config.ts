@@ -20,6 +20,7 @@ const config: Config = {
         '.fontsherif': {
           letterSpacing: '-4px',
           fontFamily: 'var(--font-barlow-condensed)',
+          fontWeight: '900',
         },
         '.text-10xl': {
           fontSize: "10rem",
