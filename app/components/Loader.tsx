@@ -7,14 +7,14 @@ function Loader() {
     return (
         <motion.div initial={{ opacity: 1 }} animate={{ opacity: 0, display: "none"}} transition={{ ease: "easeInOut", delay: 5, duration: 1 }} className="fixed top-0 left-0 z-50 w-full h-full bg-[var(--fontColor)] flex justify-center items-center">
 
-            <div className="relative px-16 py-4 ">
-                <motion.div className="text-9xl font-normal fontsherif text-[var(--background)] flex spacing-normal"
+            <div className="relative sm:px-16 px-12 py-3 ">
+                <motion.div className="sm:text-9xl text-8xl font-normal fontsherif text-[var(--background)] flex spacing-normal"
                     initial={{ opacity: 0,}}
                     animate={{ opacity: 1,}}
-                    transition={{ duration: 0, delay: 1.5,}}
+                    transition={{ duration: 0, delay: 2,}}
                 >
                     Meaty
-                    <div className="text-6xl font-light">®</div>
+                    <div className="absolute sm:text-6xl text-5xl font-light right-[-30px] top-[10px]">®</div>
                 </motion.div>
                 <div className="loader">
                     <div className="loader-item loader-item0 bg-[var(--primary)]" style={{ animationDelay: "1s" }}></div>

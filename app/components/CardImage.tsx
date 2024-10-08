@@ -1,7 +1,7 @@
 import React from 'react'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
-import { StaticImageData } from 'next/image'
+import { delay, motion } from 'framer-motion'
 
 interface CardImageProps {
   src: StaticImageData
@@ -29,12 +29,24 @@ function CardImage({
   rotation = '0deg',
 }: CardImageProps) {
   return (
-    <div className="absolute w-fit text-[var(--fontColor)]"
-      style={{ left, right, top, bottom, transform: `rotate(${rotation})` }}
-    >
-      <div className="absolute -top-[0] -translate-y-[80%] flex justify-center w-full rounded-full -z-10 text-9xl font-black fontsherif uppercase">{title}</div>
+    <motion.div
+    className="absolute w-fit text-[var(--fontColor)]"
+    style={{ left, right, top, bottom }}
+    animate={{
+      y: [0, -10, 5, 0],
+      rotate: [
+        `${rotation}`,
+        `${parseFloat(rotation) + 1}deg`,
+        `${parseFloat(rotation) - 1}deg`,
+        `${parseFloat(rotation) + 2}deg`,
+        `${rotation}`,
+      ],
+    }}
+    transition={{ duration: 20, ease: 'easeInOut', repeat: Infinity, repeatType: 'loop', delay: (Math.random()-0.5) * 10 }}
+  >
+      <div className="absolute -top-[0] -translate-y-[80%] flex justify-center w-full rounded-full -z-10 text-8xl font-black fontsherif uppercase">{title}</div>
       <div className="flex w-fit flex-col p-3 bg-[#fff6EA] rounded-xl shadow-xl">
-        <div className="relative bg-[var(--primary)] overflow-hidden rounded-md w-[220px] h-[220px] flex items-center justify-center">
+        <div className="relative bg-[var(--primary)] overflow-hidden rounded-md w-[200px] h-[200px] flex items-center justify-center">
           <Image 
             src={src} 
             alt={title} 
@@ -45,11 +57,11 @@ function CardImage({
             }} 
           />
         </div>
-        <p className="text-base mt-3 text-center max-w-[220px]" style={{ lineHeight: '1.2' }}>
+        <p className="text-base mt-3 text-center max-w-[200px]" style={{ lineHeight: '1.2' }}>
           {text}
         </p>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

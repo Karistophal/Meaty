@@ -18,7 +18,7 @@ function Header({ top }: HeaderProps) {
     <motion.div className='w-full flex justify-between items-center py-4 px-3 sm:py-8 sm:px-20 '
         initial={top ? { y: -100 } : { y: 0 }}
         animate={{ y: 0 }}
-        transition={{ duration: 0.5, delay: 9 }}
+        transition={{ duration: 0.5, delay: 7 }}
     >
         <Button text="Menu" logo={<Menu size={18} />} />
         <Logo />
