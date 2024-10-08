@@ -1,7 +1,7 @@
 import React from 'react'
 import Image, { StaticImageData } from 'next/image'
 
-import { delay, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 interface CardImageProps {
   src: StaticImageData
