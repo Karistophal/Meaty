@@ -9,7 +9,6 @@ interface CardImageProps {
   title: string
   imageScale?: string
   imagePosition?: string
-
   rotation?: string
   className?: string
 }

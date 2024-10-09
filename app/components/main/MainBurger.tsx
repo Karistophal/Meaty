@@ -33,11 +33,11 @@ function MainBurger() {
                 </motion.div>
 
                 <div>
-                    <motion.div initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8, delay: 6.5, ease: "easeInOut" }} className="absolute w-[1400px] -left-[calc(700px-50%)] lg:top-[-100px] md:top-[-70px] sm:top-[-55px] top-[-40px] text-center lg:text-10xl md:text-9xl sm:text-8xl text-7xl font-black text-[var(--fontColor)] fontsherif">
+                    <motion.div initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8, delay: 6.5, ease: "easeInOut" }} className="absolute w-[1400px] -left-[calc(700px-50%)] lg:top-[-100px] md:top-[-70px] sm:top-[-55px] top-[-44px] text-center lg:text-10xl md:text-9xl sm:text-8xl text-[63px] font-black text-[var(--fontColor)] fontsherif">
                         LOVE EVERY BITE
                     </motion.div>
 
-                    <motion.div initial={{ y: -100, scale: 1.5, rotate: 20, opacity: 0 }} animate={{ y: 0, scale: 1, rotate: 0, opacity: 1 }} transition={{ type: "tween", duration: 0.8, delay: 8, ease: [1, 0, .75, .45] }} className='absolute left-[105%] z-20 top-0 rotate-[25deg] lg:w-[200px] md:w-[150px] sm:w-[100px] w-[80px]'>
+                    <motion.div initial={{ y: -100, scale: 1.5, rotate: 20, opacity: 0 }} animate={{ y: 0, scale: 1, rotate: 0, opacity: 1 }} transition={{ type: "tween", duration: 0.8, delay: 8, ease: [1, 0, .75, .45] }} className='absolute sm:left-[105%] left-[90%] z-20 top-0 rotate-[25deg] lg:w-[200px] md:w-[170px] sm:w-[140px] w-[100px]'>
                         <Image src={Certification} alt="Certfication" />
                     </motion.div>
 
