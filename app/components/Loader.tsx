@@ -18,9 +18,9 @@ function Loader() {
                 </motion.div>
                 <div className="loader">
                     <div className="loader-item loader-item0 bg-[var(--primary)]" style={{ animationDelay: "1s" }}></div>
-                    <div className="loader-item loader-item1 bg-amber-700" style={{ animationDelay: "1.3s" }}></div>
-                    <div className="loader-item loader-item2 bg-[var(--fontColor)]" style={{ animationDelay: "1.6s" }}></div>
-                    <div className="loader-item loader-item2 bg-[#448444]" style={{ animationDelay: "1.8s" }}></div>
+                    <div className="loader-item loader-item1 bg-amber-700" style={{ animationDelay: "1.2s" }}></div>
+                    <div className="loader-item loader-item2 bg-[#a73227]" style={{ animationDelay: "1.4s" }}></div>
+                    <div className="loader-item loader-item2 bg-[#448444]" style={{ animationDelay: "1.6s" }}></div>
                 </div>
             </div>
 

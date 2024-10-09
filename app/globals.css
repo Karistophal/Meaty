@@ -144,10 +144,10 @@ html {
     width: 0; 
     opacity: 1;
   }
-  50% {
+  40% {
     width: 100%; 
   }
-  70% {
+  60% {
     width: 100%; 
     transform: translateX(0);
   }

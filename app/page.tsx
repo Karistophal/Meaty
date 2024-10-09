@@ -16,21 +16,19 @@ export default function Home() {
   }, []);  
   
   return (
-    <div className="relative w-full flex flex-col items-center overflow-hidden">
+    <div className="relative w-full flex flex-col items-center overflow-hidden select-text">
       <Header top />  
       <MainBurger />
       <TextFoodRules />
-
       
-      {/* Bandeau Bas */}
-      <div className="mt-[200px]">
+      <div className="lg:mt-[200px] sm:mt-[150px] mt-[100px]">
         <Band />
       </div>
 
       {/* Buttom Burger */}
-      <div className="mt-[1000px]"></div>
-      <div className="absolute w-[500px] min-h-[1400px] bg-[#FEC51C] rounded-full flex flex-col mt-[100px] bottom-0 translate-y-1/2">
-        <p className="absolute w-[1400px] -left-[calc(700px-50%)] top-[-100px] text-center text-10xl font-black text-[var(--fontColor)] fontsherif">ORDER NOW</p>
+      <div className="lg:mt-[1000px] md:mt-[750px] sm:mt-[600px] mt-[500px]"></div>
+      <div className="absolute lg:w-[500px] md:w-[400px] sm:w-[300px] w-[250px] lg:min-h-[1400px] md:min-h-[1120px] sm:min-h-[840px] h-[700px] bg-[#FEC51C] rounded-full flex flex-col mt-[100px] bottom-0 translate-y-1/2">
+        <p className="absolute w-[1400px] -left-[calc(700px-50%)] lg:top-[-100px] md:top-[-70px] sm:top-[-55px] top-[-40px] text-center lg:text-10xl md:text-9xl sm:text-8xl text-7xl font-black text-[var(--fontColor)] fontsherif">ORDER NOW</p>
         <Image src={Burger} alt="Burger"className="absolute pl-2 z-20" />
       </div>
 

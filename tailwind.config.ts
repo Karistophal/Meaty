@@ -18,7 +18,7 @@ const config: Config = {
     function ({ addUtilities }: { addUtilities: Function }) {
       addUtilities({
         '.fontsherif': {
-          letterSpacing: '-4px',
+          letterSpacing: '-0.025em',
           fontFamily: 'var(--font-barlow-condensed)',
           fontWeight: '900',
         },

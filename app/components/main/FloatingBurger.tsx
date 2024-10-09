@@ -14,16 +14,17 @@ import Plate from "@/app/assets/floatingBurger/Plate.png"
 
 function FloatingBurger() {
     return (
-        <div className="relative w-full h-full pt-[1000px] flex flex-col items-center overflow-hidden">
-            <Ingredient scale={2.2} top="41%" left="30%" src={BreadTop} alt="BreadTop" zIndex={1000} />
-            <Ingredient scale={2} top="48%" left="30%" src={Bacon1} alt="Bacon1" zIndex={10} />
-            <Ingredient scale={2} top="51%" left="30%" src={Bacon2} alt="Bacon2" />
-            <Ingredient scale={1.2} top="55%" left="50%" src={TomatoeUp} alt="TomatoeUp" zIndex={50} />
-            <Ingredient scale={2.1} top="57%" left="30%" src={Cheese} alt="Cheese" zIndex={40} />
-            <Ingredient scale={1.7} top="63%" left="30%" src={Steak} alt="Steak" zIndex={30} />
-            <Ingredient scale={2} top="69%" left="30%" src={TomatoeBottom} alt="TomatoeBottom" zIndex={20} />
-            <Ingredient scale={2.2} top="73%" left="30%" src={Salad} alt="Salad" zIndex={10} />
-            <Ingredient scale={3} top="82%" left="30%" src={Plate} alt="Plate" />
+        <div className="absolute h-full w-full z-10">
+            <Ingredient className="w-[240px] sm:w-[280px] md:w-[360px] lg:w-[450px] lg:left-[10px] md:left-[10px] sm:left-[0px] left-[0px]" top="39%" src={BreadTop} alt="BreadTop" zIndex={1000} />
+            <Ingredient className="w-[220px] sm:w-[260px] md:w-[320px] lg:w-[420px] lg:left-[40px] md:left-[40px] sm:left-[20px] left-[20px]" top="47%" src={Bacon1} alt="Bacon1" zIndex={10} />
+            <Ingredient className="w-[220px] sm:w-[260px] md:w-[320px] lg:w-[420px] lg:left-[40px] md:left-[40px] sm:left-[20px] left-[20px]" top="50%" src={Bacon2} alt="Bacon2" />
+            <Ingredient className="w-[120px] sm:w-[150px] md:w-[175px] lg:w-[250px] lg:left-[230px] md:left-[230px] sm:left-[150px] left-[120px]" top="56%" src={TomatoeUp} alt="TomatoeUp" zIndex={50} />
+            <Ingredient className="w-[230px] sm:w-[280px] md:w-[330px] lg:w-[430px] lg:left-[50px] md:left-[50px] sm:left-[10px] left-[10px]" top="55%" src={Cheese} alt="Cheese" zIndex={40} />
+            <Ingredient className="w-[180px] sm:w-[230px] md:w-[260px] lg:w-[350px] lg:left-[80px] md:left-[80px] sm:left-[35px] left-[35px]" top="62%" src={Steak} alt="Steak" zIndex={30} />
+            <Ingredient className="w-[210px] sm:w-[260px] md:w-[305px] lg:w-[400px] lg:left-[60px] md:left-[60px] sm:left-[20px] left-[20px]" top="68%" src={TomatoeBottom} alt="TomatoeBottom" zIndex={20} />
+            <Ingredient className="w-[240px] sm:w-[290px] md:w-[340px] lg:w-[440px] lg:left-[30px] md:left-[30px] sm:left-[10px] left-[10px]" top="70%" src={Salad} alt="Salad" zIndex={10} />
+            <Ingredient className="w-[300px] sm:w-[360px] md:w-[450px] lg:w-[550px] lg:left-[-30px] md:left-[-30px] sm:left-[-30px] left-[-25px]" top="77%" src={Plate} alt="Plate" />
+
 
         </div>
     )

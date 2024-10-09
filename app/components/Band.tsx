@@ -13,7 +13,7 @@ interface BandProps {
 function Band({ first }: BandProps) {
     return (
         <>
-            <div className={`absolute flex md:w-[8000px] w-[6650px] lg:h-[120px] md:h-[100px] h-[80px] text-[var(--background)] font-black md:text-5xl text-4xl z-100 rotate-[4deg] left-1/2 -translate-x-[50%] -z-10 ${first ? 'lg:top-[400px] md:top-[320px] sm:top-[240px] top-[200px]' : ''}`}>
+            <div className={`absolute flex md:w-[8000px] w-[6650px] lg:h-[120px] md:h-[100px] h-[80px] text-[var(--background)] font-black md:text-5xl text-4xl z-100 rotate-[4deg] left-1/2 -translate-x-[50%] -z-20 ${first ? 'lg:top-[400px] md:top-[320px] sm:top-[240px] top-[200px]' : ''}`}>
                 <div className='band-container band-container-left' style={{ animationDelay: '8s' }}>
                     {
                         Array(9).fill(0).map((_, index) => (
@@ -30,7 +30,7 @@ function Band({ first }: BandProps) {
                     }
                 </div>
             </div>
-            <div className={`absolute flex md:w-[8000px] w-[6650px] lg:h-[120px] md:h-[100px] h-[80px] text-[var(--background)] font-black md:text-5xl text-4xl z-100 rotate-[-4deg] left-1/2 -translate-x-[50%] z-10 ${first ? 'lg:top-[400px] md:top-[320px] sm:top-[240px] top-[200px]' : ''}`}>
+            <div className={`absolute flex md:w-[8000px] w-[6650px] lg:h-[120px] md:h-[100px] h-[80px] text-[var(--background)] font-black md:text-5xl text-4xl z-100 rotate-[-4deg] left-1/2 -translate-x-[50%] z-20 ${first ? 'lg:top-[400px] md:top-[320px] sm:top-[240px] top-[200px]' : ''}`}>
                 <div className='band-container band-container-right' style={{ animationDelay: '8.5s' }}>
 
                     {
