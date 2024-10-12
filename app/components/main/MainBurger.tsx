@@ -37,7 +37,7 @@ function MainBurger() {
                         LOVE EVERY BITE
                     </motion.div>
 
-                    <motion.div initial={{ y: -100, scale: 1.5, rotate: 20, opacity: 0 }} animate={{ y: 0, scale: 1, rotate: 0, opacity: 1 }} transition={{ type: "tween", duration: 0.8, delay: 8, ease: [1, 0, .75, .45] }} className='absolute sm:left-[105%] left-[90%] z-20 top-0 rotate-[25deg] lg:w-[200px] md:w-[170px] sm:w-[140px] w-[100px]'>
+                    <motion.div initial={{ y: -100, scale: 1.5, rotate: 20, opacity: 0 }} animate={{ y: 0, scale: 1, rotate: 0, opacity: 1 }} transition={{ type: "tween", duration: 0.8, delay: 7.5, ease: [1, 0, .75, .45] }} className='absolute sm:left-[105%] left-[90%] z-20 top-0 rotate-[25deg] lg:w-[200px] md:w-[170px] sm:w-[140px] w-[100px]'>
                         <Image src={Certification} alt="Certfication" />
                     </motion.div>
 
